@@ -163,9 +163,9 @@ function del(id){if(!confirm('Удалить операцию?'))return;S.tx=S.t
 function set(){const c=S.cfg;
  $('#v-set').innerHTML=`<div class="card"><h3>Синхронизация с GitHub</h3>
  <label>Твой логин на GitHub</label><input class="f" id="c-o" value="${esc(c.owner||'')}" autocapitalize="off" autocorrect="off">
- <label>Приватный репозиторий для данных</label><input class="f" id="c-r" value="${esc(c.repo||'')}" placeholder="finance-data" autocapitalize="off" autocorrect="off">
+ <label>Приватный репозиторий для данных</label><input class="f" id="c-r" value="${esc(c.repo||'')}" placeholder="finance-data2.0" autocapitalize="off" autocorrect="off">
  <label>Токен доступа</label><input class="f" id="c-t" type="password" value="${esc(c.token||'')}" placeholder="github_pat_..." autocapitalize="off" autocorrect="off">
- <label>Твоё имя (видно в истории)</label><input class="f" id="c-m" value="${esc(c.me||'')}" placeholder="Павел" maxlength="20">
+ <label>Твоё имя (видно в истории)</label><input class="f" id="c-m" value="${esc(c.me||'')}" placeholder="Lera" maxlength="20">
  <button class="go" onclick="saveCfg()">Сохранить и синхронизировать</button>
  <p class="note" id="stt">${c.token?'Данные лежат в файле data.json твоего приватного репозитория.':'Пока всё хранится только на телефоне. Заполни поля — и данные поедут в приватный репозиторий.'}</p></div>
  ${impList()}<div class="card"><h3>Импорт из банка</h3><p class="note" style="margin:0 0 12px">Подойдёт выписка в PDF, Excel или CSV из любого банка. Повторная загрузка не создаёт дубли.</p>
